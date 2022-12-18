@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	Hugo Story by CaressOfSteel
+	A (modular, highly tweakable) responsive one-page theme for Hugo.
+	Ported from Story by HTML5UP.
+	This Hugo theme is licensed under the Creative Commons Attribution 3.0 License.
+-->
+<html>
+
+{{ partial "template/head" . }}
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@1,900&family=Zen+Tokyo+Zoo&display=swap"
+    rel="stylesheet">
+
+
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
+
+        
+      {{ partial "banner" site.Data.banner }}
+
+      {{ partial "spotlight" site.Data.spotlight1 }}
+
+      
+      {{ partial "spotlight" site.Data.spotlight2 }}
+      <!--{{ partial "spotlight" site.Data.spotlight3 }}-->
+    
+      <section class="wrapper style2 align-center" id="getting-started">
+        <div class="inner">
+            <h2>Get Started</h2>
+            <!--<p>Join</p>-->
+            <div class="index align-left">
+              <!-- Form -->
+              <section>
+                <!--<header>
+                    <h3>Form</h3>
+                </header>-->
+                <div class="content">
+
+                    <form id="signup-form">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Contact Name</label>
+                                <input type="text" name="name" id="name" value="" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="me@company.com" required />
+                            </div>
+                            <div class="field">
+                              <label for="domain">Domain</label>
+                              <input type="text" name="domain" id="domain" placeholder="company.com" required />
+                            </div>
+                            <div class="field">
+                              <label for="company">Company</label>
+                              <input type="text" name="company" id="company" placeholder="Company" />
+                            </div>
+                            <div class="field">
+                              <input type="checkbox" id="has-existing-site" name="has-existing-site" />
+                                <label for="has-existing-site">Existing website? Check this box if you have a website at your domain that you would like to operate along side mastodon.</label>
+                            </div>
+                            <div class="field">
+                              <input type="checkbox" id="has-existing-email" name="has-existing-email" />
+                                <label for="has-existing-email">Existing email? Check this box if your domain has an existing email provider. (Google Suite, SendGrid, Office365, etc) </label>
+                            </div>
+
+                            <div class="field half">
+                              <label for="reach">Reach - The number of followers that typically follow you on social media.</label>
+                              <select name="reach" id="reach">
+                                  <option value="" disabled selected>- Reach -</option>
+                                  <option value="1">1000 - 10,000</option>
+                                  <option value="2">10,000 - 100,000</option>
+                                  <option value="3">100,000 - 1,000,000</option>
+                                  <option value="4">1M+</option>
+                              </select>
+                            </div>
+
+                            <div class="field half">
+                              <label for="accounts">Accounts - The number of accounts you want to host on your private instance.</label>
+                              <select name="accounts" id="accounts">
+                                  <option value="" disabled selected>- Accounts -</option>
+                                  <option value="small">1 - 100</option>
+                                  <option value="medium">100 - 1,000</option>
+                                  <option value="large">10k+</option>
+                              </select>
+                            </div>
+
+                            <div class="field">
+                              <label for="region">Region - The region the majority of your followers or users reside in.</label>
+                              <select name="region" id="region">
+                                  <option value="" disabled selected>- Region -</option>
+                                  <option value="africa">Africe</option>
+                                  <option value="asia">Asia</option>
+                                  <option value="europe">Europe</option>
+                                  <option value="oceania">Oceania</option>
+                                  <option value="north-america">North America</option>
+                                  <option value="south-america">South America</option>
+                              </select>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" name="submit" id="submit" value="Submit" /></li>
+                        </ul>
+                    </form>
+
+                    <div id="signup-complete hidden">
+                      <center><h3> ✔️ Singup Complete</h3></center>
+                    </div>
+                </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+        {{ partial "template/footer" . }}
+
+        <!-- Wrapper -->
+    </div>
+
+    {{ template "_internal/google_analytics.html" . }}
+    {{ partial "template/scripts" . }}
+
+    <script>
+
+function hideDiv(divId){ return addRemoveClass(divId, 'add', 'hidden') }
+
+function showDiv(divId){ return addRemoveClass(divId, 'remove', 'hidden') }
+
+function addRemoveClass(divId, addRemove='add', className='hidden', display='block'){
+    var div = document.getElementById(divId)
+
+    //console.log('div', addRemove, className, div)
+    
+    if(addRemove==='remove'){
+      div.classList.remove(className)
+      
+      if(className=='hidden'){
+        div.style.display = display
+      }
+      //console.log('remove')
+    }
+    else{
+      //console.log('add')
+      
+      if(className=='hidden'){
+        div.style.display = "none";
+      }
+      div.classList.add(className)
+    }
+
+  }
+
+      let form = document.getElementById('signup-form')
+
+
+      let data = null
+      function submitForm(e){
+        console.log('on submit ', e)
+
+        const formData = new FormData(e.target)
+        data = Object.fromEntries(formData)
+
+        e.preventDefault();
+      }
+
+
+
+      form.onsubmit = submitForm
+    </script>
+
+</body>
+
+</html>

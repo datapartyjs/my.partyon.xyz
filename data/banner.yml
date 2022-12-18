@@ -1,0 +1,11 @@
+####################### Banner #########################
+style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
+title : "My.PartyOn"
+subtitle: |
+  Managed Mastodon for Social Media Professionals
+content : |
+  Mastodon is one of the fastest growing new social media platforms. If you're an invidual, team or company with a curated brand managed mastodon hosting is the pain free way to get the control you want.
+button:
+  label : "Get Started"
+  link : "#getting-started"
+image : "partyon-glitch-square.png"

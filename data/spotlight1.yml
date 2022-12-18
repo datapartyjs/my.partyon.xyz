@@ -1,0 +1,12 @@
+####################### Spotlight #########################
+style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+id: "first"
+title : "We run the servers . . . "
+content: |
+  <b>You bring the content, moderators and vibe!</b>
+
+  There are turn key clouds for every modern business software, why should Mastodon hosting be any different? We'll keep the servers up to date and online so you can focus on your community.
+button: 
+  label: "Get Setup"
+  link: "#getting-started"
+image: "PartyOnArch.svg"

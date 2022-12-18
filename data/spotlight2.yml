@@ -1,0 +1,42 @@
+####################### Spotlight #########################
+style: "style1 orient-left invert content-align-left image-position-center onscroll-image-fade-in"
+title : "Pricing"
+content: |
+  Starting at $55/mo <strong>My.PartyOn</strong> has the right plan for your communities needs.
+
+
+  <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td><a href='https://joinmastodon.org/servers'>Join existing server</a></td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Small</td>
+                <td>Great for individuals, teams and small businesses.</td>
+                <td>$55/mo</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>Growing active communities.</td>
+                <td>$110/mo</td>
+            </tr>
+            <tr>
+                <td>Large</td>
+                <td>Professional organizations and large communities</td>
+                <td>$500/mo</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
+image: "party-on-square.gif"

@@ -1,0 +1,30 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+baseURL = "https://my.partyon.xyz"
+languageCode = "en-us"
+title = "My - PartyOn"
+theme = "hugo-story"
+
+publishDir = "docs"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
+# googleAnalytics = "your-google-analytics-id"
+
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+  description = "My Partyon"
+  logo = "images/banner.jpg"
+  favicon = true
+
+[Params.social]
+  github = "https://github.com/datapartyjs/"
+  mastodon = "https://partyon.xyz/@dataparty"
