@@ -22,7 +22,7 @@ disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 
 [Params]
   description = "My Partyon"
-  logo = "images/banner.jpg"
+  logo = "party-on-square.jpg"
   favicon = true
 
 [Params.social]
