@@ -37,7 +37,7 @@ content: |
             </tr>
         </tbody>
     </table>
-    <small>*Addition</small>
+    <!--<small>*Each plan includes bandwidth and storage allotments</small>-->
   </div>
 
 image: "party-on-square.gif"
