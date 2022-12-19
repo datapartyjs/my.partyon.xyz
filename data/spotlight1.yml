@@ -8,5 +8,5 @@ content: |
   There are turn key clouds for every modern business software, why should Mastodon hosting be any different? We'll keep the servers up to date and online so you can focus on your community.
 button: 
   label: "Get Setup"
-  link: "#getting-started"
+  link: "#get-started"
 image: "PartyOnArch.svg"

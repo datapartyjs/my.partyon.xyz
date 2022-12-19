@@ -2,7 +2,7 @@
 style: "style1 orient-left invert content-align-left image-position-center onscroll-image-fade-in"
 title : "Pricing"
 content: |
-  Starting at $55/mo <strong>My.PartyOn</strong> has the right plan for your community.
+  Starting at <i>$55/mo</i> <strong>My.PartyOn</strong> has the right plan for your community.
 
 
   <div class="table-wrapper">
@@ -18,25 +18,26 @@ content: |
             <tr>
                 <td></td>
                 <td><a href='https://joinmastodon.org/servers'>Join existing server</a></td>
-                <td><strong>FREE</strong></td>
+                <td><strong><i>FREE</i></strong></td>
             </tr>
             <tr>
                 <td><strong>Small</strong></td>
                 <td>Great for individuals, teams and small businesses.</td>
-                <td>$55/mo</td>
+                <td><i>$55/mo*</i></td>
             </tr>
             <tr>
                 <td><strong>Medium</strong></td>
                 <td>Growing active communities.</td>
-                <td>$110/mo</td>
+                <td><i>$110/mo*</i></td>
             </tr>
             <tr>
                 <td><strong>Large</strong></td>
                 <td>Professional organizations and large communities</td>
-                <td>$500/mo</td>
+                <td><i>$500/mo*</i></td>
             </tr>
         </tbody>
     </table>
+    <small>*Addition</small>
   </div>
 
 image: "party-on-square.gif"
