@@ -48,9 +48,9 @@
             <div class="index align-left">
               <!-- Form -->
               <section>
-                <!--<header>
-                    <h3>Form</h3>
-                </header>-->
+                <header>
+                    <h3>Waitlist</h3>
+                </header>
                 <div class="content">
 
                     <form id="signup-form">
@@ -73,11 +73,11 @@
                             </div>
                             <div class="field">
                               <input type="checkbox" id="has-existing-site" name="has-existing-site" />
-                                <label for="has-existing-site">Existing website? Check this box if you have a website at your domain that you would like to operate along side mastodon.</label>
+                                <label for="has-existing-site"><strong>Existing website?</strong> Check this box if you have a website at your domain that you would like to operate along side mastodon.</label>
                             </div>
                             <div class="field">
                               <input type="checkbox" id="has-existing-email" name="has-existing-email" />
-                                <label for="has-existing-email">Existing email? Check this box if your domain has an existing email provider. (Google Suite, SendGrid, Office365, etc) </label>
+                                <label for="has-existing-email"><strong>Existing email?</strong> Check this box if your domain has an existing email provider. (Google Suite, SendGrid, Office365, etc) </label>
                             </div>
 
                             <div class="field half">
@@ -224,7 +224,7 @@ function addRemoveClass(divId, addRemove='add', className='hidden', display='blo
 
         await initParty()
 
-        const result = await party.comms.call('forms/signup', data, {
+        const result = await party.comms.call('secure-echo', data, {
               expectClearTextReply: false,
               sendClearTextRequest: false,
               useSessions: false

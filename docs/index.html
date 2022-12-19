@@ -81,7 +81,7 @@
         <h1>My.PartyOn</h1>
         <p class="major">Managed Mastodon for Social Media Professionals
 </p>
-        <p>Mastodon is one of the fastest growing new social media platforms. If you're an invidual, team or company with a curated brand managed mastodon hosting is the pain free way to get the control you want.
+        <p>Mastodon is one of the fastest growing new social media platforms. If you're an individual, team or company with a curated brand managed mastodon hosting is the pain free way to get the control you want.
 </p>
         <ul class="actions stacked">
             <li><a href="#getting-started" class="button primary large wide smooth-scroll-middle">Get Started</a></li>
@@ -114,7 +114,7 @@ There are turn key clouds for every modern business software, why should Mastodo
 <section class="spotlight style1 orient-left invert content-align-left image-position-center onscroll-image-fade-in">
     <div class="content">
         <h2>Pricing</h2>
-        <p>Starting at $55/mo <strong>My.PartyOn</strong> has the right plan for your communities needs.
+        <p>Starting at $55/mo <strong>My.PartyOn</strong> has the right plan for your community.
 
 
 <div class="table-wrapper">
@@ -130,20 +130,20 @@ There are turn key clouds for every modern business software, why should Mastodo
           <tr>
               <td></td>
               <td><a href='https://joinmastodon.org/servers'>Join existing server</a></td>
-              <td>FREE</td>
+              <td><strong>FREE</strong></td>
           </tr>
           <tr>
-              <td>Small</td>
+              <td><strong>Small</strong></td>
               <td>Great for individuals, teams and small businesses.</td>
               <td>$55/mo</td>
           </tr>
           <tr>
-              <td>Medium</td>
+              <td><strong>Medium</strong></td>
               <td>Growing active communities.</td>
               <td>$110/mo</td>
           </tr>
           <tr>
-              <td>Large</td>
+              <td><strong>Large</strong></td>
               <td>Professional organizations and large communities</td>
               <td>$500/mo</td>
           </tr>
@@ -172,7 +172,9 @@ There are turn key clouds for every modern business software, why should Mastodo
             <div class="index align-left">
               
               <section>
-                
+                <header>
+                    <h3>Waitlist</h3>
+                </header>
                 <div class="content">
 
                     <form id="signup-form">
@@ -195,11 +197,11 @@ There are turn key clouds for every modern business software, why should Mastodo
                             </div>
                             <div class="field">
                               <input type="checkbox" id="has-existing-site" name="has-existing-site" />
-                                <label for="has-existing-site">Existing website? Check this box if you have a website at your domain that you would like to operate along side mastodon.</label>
+                                <label for="has-existing-site"><strong>Existing website?</strong> Check this box if you have a website at your domain that you would like to operate along side mastodon.</label>
                             </div>
                             <div class="field">
                               <input type="checkbox" id="has-existing-email" name="has-existing-email" />
-                                <label for="has-existing-email">Existing email? Check this box if your domain has an existing email provider. (Google Suite, SendGrid, Office365, etc) </label>
+                                <label for="has-existing-email"><strong>Existing email?</strong> Check this box if your domain has an existing email provider. (Google Suite, SendGrid, Office365, etc) </label>
                             </div>
 
                             <div class="field half">
@@ -375,7 +377,7 @@ function addRemoveClass(divId, addRemove='add', className='hidden', display='blo
 
         await initParty()
 
-        const result = await party.comms.call('forms/signup', data, {
+        const result = await party.comms.call('secure-echo', data, {
               expectClearTextReply: false,
               sendClearTextRequest: false,
               useSessions: false

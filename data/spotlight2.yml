@@ -2,7 +2,7 @@
 style: "style1 orient-left invert content-align-left image-position-center onscroll-image-fade-in"
 title : "Pricing"
 content: |
-  Starting at $55/mo <strong>My.PartyOn</strong> has the right plan for your communities needs.
+  Starting at $55/mo <strong>My.PartyOn</strong> has the right plan for your community.
 
 
   <div class="table-wrapper">
@@ -18,20 +18,20 @@ content: |
             <tr>
                 <td></td>
                 <td><a href='https://joinmastodon.org/servers'>Join existing server</a></td>
-                <td>FREE</td>
+                <td><strong>FREE</strong></td>
             </tr>
             <tr>
-                <td>Small</td>
+                <td><strong>Small</strong></td>
                 <td>Great for individuals, teams and small businesses.</td>
                 <td>$55/mo</td>
             </tr>
             <tr>
-                <td>Medium</td>
+                <td><strong>Medium</strong></td>
                 <td>Growing active communities.</td>
                 <td>$110/mo</td>
             </tr>
             <tr>
-                <td>Large</td>
+                <td><strong>Large</strong></td>
                 <td>Professional organizations and large communities</td>
                 <td>$500/mo</td>
             </tr>
