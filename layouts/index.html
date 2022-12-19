@@ -167,6 +167,7 @@ function addRemoveClass(divId, addRemove='add', className='hidden', display='blo
   }
 
       let count = 0
+      let config = null
       let party = null
       let live = false
 
@@ -175,15 +176,18 @@ function addRemoveClass(divId, addRemove='add', className='hidden', display='blo
       async function initParty(){
         if(party){return}
 
+        config = new Dataparty.Config.LocalStorageConfig({
+          basePath:'my-partyon',
+          cloud: {
+            uri: 'https://api.partyon.xyz'
+            //uri: 'http://localhost:4001'
+          }
+        })
+
         party = new Dataparty.LokiParty({
           path: 'my-partyon',
           dbAdapter: new Dataparty.LokiDb.LokiLocalStorageAdapter(),
-          config: new Dataparty.Config.LocalStorageConfig({
-            basePath:'my-partyon',
-            cloud: {
-              uri: 'https://api.partyon.xyz'
-            }
-          })
+          config
         })
 
         await party.start()
@@ -196,10 +200,13 @@ function addRemoveClass(divId, addRemove='add', className='hidden', display='blo
         }
 
         try{
-          live = await party.comms.call('forms/singup/is-live')
+          console.log('checking is live')
+          const result = await Dataparty.Comms.RestComms.HttpGet( config.read('cloud.uri') + '/forms/signup/is-live')
+          console.log('got', result)
+          live = result.live == true
         }
         catch(err){
-          console.log('live', live)
+          console.log('catch live', live, err)
           live = false || localStorage.getItem('force-live')
         }
 
@@ -225,7 +232,7 @@ function addRemoveClass(divId, addRemove='add', className='hidden', display='blo
 
         await initParty()
 
-        const result = await party.comms.call('secure-echo', data, {
+        const result = await party.comms.call('forms/signup-survey', data, {
               expectClearTextReply: false,
               sendClearTextRequest: false,
               useSessions: false
